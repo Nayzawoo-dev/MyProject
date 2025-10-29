@@ -79,7 +79,7 @@
         </asp:ScriptManager>
 
         <!-- Navigation -->
-        <nav class="bg-white shadow-lg sticky top-0">
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20">
                     <!-- Logo -->
@@ -94,7 +94,7 @@
                     <div class="hidden md:flex items-center space-x-8">
                         <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Default.aspx">ပင်မစာမျက်နှာ</a>
                         <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Donate">လှူဒါန်းလိုပါကဆက်သွယ်ရန်</a>
-                        <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Contact">အကြံပြုစာရေးသားရန်</a>
+                        <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Contact">အကြံပြုစာများအားဖတ်ရန်</a>
                     </div>
 
                     <!-- Mobile menu button -->
@@ -111,9 +111,9 @@
                 <!-- Mobile Menu -->
                 <div id="mobile-menu" class="mobile-menu hidden md:hidden pb-4">
                     <div class="flex flex-col space-y-3">
-                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/">ပင်မစာမျက်နှာ</a>
+                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Default.aspx">ပင်မစာမျက်နှာ</a>
                         <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Donate">လှူဒါန်းလိုပါကဆက်သွယ်ရန်</a>
-                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Contact">အကြံပြုစာရေးသားရန်</a>
+                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Contact">အကြံပြုစာများအားဖတ်ရန်</a>
                     </div>
                 </div>
             </div>
@@ -129,7 +129,7 @@
         <!-- Footer -->
         <footer class="bg-dark text-white mt-[100px]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Organization Info -->
                     <div class="lg:col-span-2">
                         <h3 class="text-2xl font-bold text-white mb-4">OPF Foundation</h3>
@@ -137,8 +137,8 @@
                             ဤမြန်မာသက်ကြီးဖောင်ဒေးရှင်းသည် အကျိုးအမြတ်မယူပဲသက်ကြီးများအတွက်ဆောင်ရွက်သောပရဟိတစေတနာ့ဝန်ထမ်းဖြစ်သည့်အပြင် နိုင်ငံရေး၊လူမျိုးရေးနှင့်မသက်ဆိုင်သောအဖွဲ့အစည်းတစ်ခုဖြစ်ပါသည်။
                         </p>
                     </div>
+                </div>
             </div>
-           </div>
         </footer>
     </form>
 

@@ -1,23 +1,167 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="MyProject.Site_Mobile" %>
-<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="MyProject.Site_Mobile" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Elderly Care Foundation</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c7873',
+                        secondary: '#6fb98f',
+                        accent: '#ff7e5f',
+                        light: '#f8f9fa',
+                        dark: '#343a40',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        .navbar-brand svg {
+            height: 40px;
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover svg {
+            transform: scale(1.05);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <h1>Mobile Master Page</h1>
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-        <friendlyUrls:ViewSwitcher runat="server" />
-    </div>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a class="navbar-brand flex" runat="server" href="~/">
+                            <asp:Image runat="server" ImageUrl="~/uploads/images/health.jpg" CssClass="h-12 md:h-15 lg:h-20 w-auto" />
+                        </a>
+                        <text y="30" font-family="Arial" font-size="14" fill="#2c7873">မြန်မာသက်ကြီးဖောင်ဒေးရှင်း(OPF)</text>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Default.aspx">ပင်မစာမျက်နှာ</a>
+                        <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Donate">လှူဒါန်းလိုပါကဆက်သွယ်ရန်</a>
+                        <a class="text-gray-700 hover:text-primary font-medium transition duration-150" runat="server" href="~/Contact">အကြံပြုစာများအားဖတ်ရန်</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button type="button" id="mobile-menu-button"
+                            class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary transition duration-150">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="mobile-menu hidden md:hidden pb-4">
+                    <div class="flex flex-col space-y-3">
+                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/">ပင်မစာမျက်နှာ</a>
+                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Donate">လှူဒါန်းလိုပါကဆက်သွယ်ရန်</a>
+                        <a class="text-gray-700 hover:text-primary font-medium py-2 transition duration-150" runat="server" href="~/Contact">အကြံပြုစာရေးသားရန်</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 w-full">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <!-- This area will be filled by individual content pages -->
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white mt-[100px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Organization Info -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-bold text-white mb-4">OPF Foundation</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            ဤမြန်မာသက်ကြီးဖောင်ဒေးရှင်းသည် အကျိုးအမြတ်မယူပဲသက်ကြီးများအတွက်ဆောင်ရွက်သောပရဟိတစေတနာ့ဝန်ထမ်းဖြစ်သည့်အပြင် နိုင်ငံရေး၊လူမျိုးရေးနှင့်မသက်ဆိုင်သောအဖွဲ့အစည်းတစ်ခုဖြစ်ပါသည်။
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </form>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileButton = document.getElementById('mobile-menu-button');
+
+            if (!mobileMenu.contains(event.target) && !mobileButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/jquery-3.6.0.js") %>
+    </asp:PlaceHolder>
 </body>
 </html>

@@ -10,11 +10,7 @@
                 သက်ကြီးရွယ်အိုများ၏ ဘဝအရည်အသွေးမြင့်မားရေးနှင့် လူမှုအသိုင်းအဝိုင်းအတွင်း ဂရုစိုက်မှုပေးရန် ရည်ရွယ်ချက်ဖြင့် ဖွဲ့စည်းတည်ထောင်ထားပါသည်။
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                <a href="About.aspx" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-lg shadow-lg">
-                    ဖွဲ့စည်းရည်ရွယ်ချက်များ
-                </a>
-                <a href="Donate.aspx" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 text-lg shadow-lg">
-                    လှူဒါန်းရန်
+                <a href="SelectCityForView.aspx" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-lg shadow-lg">OPF‌ဖောင်ဒေးရှင်း၏ မြို့နယ်အလိုက်လှုပ်ရှားမှုများ
                 </a>
             </div>
         </div>
@@ -24,8 +20,8 @@
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">ကျွန်ုပ်တို့၏ ရည်ရွယ်ချက်များ</h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">သက်ကြီးရွယ်အိုများအတွက် ပိုမိုကောင်းမွန်သော ဘဝအရည်အသွေးကို ဖန်တီးပေးရန်</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">OPFဖောင်ဒေးရှင်း၏ရည်ရွယ်ချက်နှင့်အခြားအကြောင်းအရာများ</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">အကျယ်တဝင့်ဖော်ပြချက်များကိုအောက်တွင်ဖတ်ရှုနိုင်သည်။</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -36,8 +32,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">လူမှုရေးထောက်ပံ့မှု</h3>
-                    <p class="text-gray-600 text-center">သက်ကြီးရွယ်အိုများ လူမှုရေးအရ တစ်ဦးနှင့်တစ်ဦး ဆက်သွယ်နိုင်ရန် နေရာထိုင်ခင်းများ ဖန်တီးပေးခြင်း</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">OPF ဖောင်ဒေးရှင်းဆိုတာဘာလဲ?</h3>
                 </div>
 
                 <!-- Mission 2 -->
@@ -47,8 +42,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">နေအိမ်စောင့်ရှောက်မှု</h3>
-                    <p class="text-gray-600 text-center">အိမ်တွင်နေထိုင်သော သက်ကြီးရွယ်အိုများအား နေ့စဉ်လိုအပ်ချက်များ ဖြည့်ဆည်းပေးခြင်း</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">OPF ဖောင်ဒေးရှင်း၏ရည်ရွယ်ချက်</h3>
                 </div>
 
                 <!-- Mission 3 -->
@@ -58,8 +52,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">ကျန်းမာရေးစောင့်ရှောက်မှု</h3>
-                    <p class="text-gray-600 text-center">သက်ကြီးရွယ်အိုများ၏ ကျန်းမာရေးကို ပုံမှန်စစ်ဆေးပေးခြင်းနှင့် လိုအပ်သော ဆေးဝါးကုသမှုများ ဆောင်ရွက်ပေးခြင်း</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">OPF ဖောင်ဒေးရှင်း၏ပညာပေးလုပ်ငန်းများ</h3>
                 </div>
 
                 <!-- Mission 4 -->
@@ -69,8 +62,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">ပညာပေးလုပ်ငန်းများ</h3>
-                    <p class="text-gray-600 text-center">သက်ကြီးရွယ်အိုများအတွက် ကျန်းမာရေးဗဟုသုတများနှင့် လူမှုရေးဆိုင်ရာ အသိပညာပေးခြင်း</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">OPF ‌ဖောင်ဒေးရှင်း၏ဖွဲ့စည်းထားမှုအခြေအနေ</h3>
                 </div>
             </div>
         </div>
@@ -86,10 +78,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="Donate.aspx" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-lg shadow-lg">
-                        လှူဒါန်းရန်
-                    </a>
-                    <a href="Contact.aspx" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition duration-300 text-lg">
-                        ဆက်သွယ်ရန်
+                        လှူဒါန်းလိုပါကဆက်သွယ်ရန်
+
                     </a>
                 </div>
             </div>
