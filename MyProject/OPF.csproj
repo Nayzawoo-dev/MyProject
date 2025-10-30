@@ -111,8 +111,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -133,6 +131,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="LeaderList.aspx" />
+    <Content Include="LeaderManage.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -191,6 +191,8 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="SelectCityForView.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="SuggestionAdd.aspx" />
+    <Content Include="SuggestionList.aspx" />
     <Content Include="UploadPost.aspx" />
     <Content Include="ViewPosts.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -200,21 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +212,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderList.aspx.cs">
+      <DependentUpon>LeaderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaderList.aspx.designer.cs">
+      <DependentUpon>LeaderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderManage.aspx.cs">
+      <DependentUpon>LeaderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaderManage.aspx.designer.cs">
+      <DependentUpon>LeaderManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectCityForView.aspx.cs">
@@ -246,6 +248,20 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SuggestionAdd.aspx.cs">
+      <DependentUpon>SuggestionAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuggestionAdd.aspx.designer.cs">
+      <DependentUpon>SuggestionAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuggestionList.aspx.cs">
+      <DependentUpon>SuggestionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuggestionList.aspx.designer.cs">
+      <DependentUpon>SuggestionList.aspx</DependentUpon>
     </Compile>
     <Compile Include="UploadPost.aspx.cs">
       <DependentUpon>UploadPost.aspx</DependentUpon>

@@ -77,7 +77,7 @@
                     သင့်ရဲ့လှူဒါန်းမှုတစ်ခုက သက်ကြီးရွယ်အိုတစ်ဦး၏ ဘဝကို ပြောင်းလဲစေနိုင်ပါသည်။
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="Donate.aspx" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-lg shadow-lg">
+                    <a href="LeaderList.aspx" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-lg shadow-lg">
                         လှူဒါန်းလိုပါကဆက်သွယ်ရန်
 
                     </a>
@@ -94,7 +94,7 @@
                 <p class="text-gray-600 text-lg mb-8">
                     ကျွန်ုပ်တို့၏ လုပ်ငန်းများကို ပိုမိုကောင်းမွန်အောင် ကူညီနိုင်မည့် သင့်ရဲ့အကြံဉာဏ်များကို လက်ခံရယူလိုပါသည်။
                 </p>
-                <a href="Suggestion.aspx" class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 text-lg shadow-lg">
+                <a href="SuggestionAdd.aspx" class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 text-lg shadow-lg">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                     </svg>

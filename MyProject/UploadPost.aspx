@@ -97,7 +97,7 @@
                         runat="server"
                         Text="Post တင်မယ်"
                         OnClick="btnSubmit_Click"
-                        OnClientClick="var btn=this; setTimeout(function(){btn.text=Posting.....;btn.disabled=true;}, 5); return true;"
+                        OnClientClick="var btn=this; setTimeout(function(){btn.value='Post တင်နေသည်...';btn.disabled=true;}, 5); return true;"
                         CssClass="bg-primary hover:bg-opacity-90 text-white font-semibold py-4 px-12 rounded-lg transition duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer text-lg" />
                 </div>
             </div>

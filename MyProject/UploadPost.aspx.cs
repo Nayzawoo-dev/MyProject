@@ -33,6 +33,14 @@ namespace MyProject
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             int postId;
+            if(string.IsNullOrEmpty(txtCaption.Text) || fuImages.HasFile == false)
+            {
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+                lblMessage.Text = "အချက်အလက်ပြည့်စုံစွာရေးပါ";
+                pnlMessage.ForeColor = System.Drawing.Color.Red;
+                pnlMessage.Visible = true;
+                return;
+            }
             using (var con = new SqlConnection(cs))
             {
                 string insertPost = "INSERT INTO Post (Caption, city_id) VALUES (@Caption, @CityId); SELECT CAST(SCOPE_IDENTITY() as int);";
@@ -55,6 +63,7 @@ namespace MyProject
                 }
             }
 
+            lblMessage.ForeColor = System.Drawing.Color.Green;
             lblMessage.Text = "✅ Post တင်ခြင်းအောင်မြင်ပါသည်။";
             pnlMessage.Visible = true;
             txtCaption.Text = "";

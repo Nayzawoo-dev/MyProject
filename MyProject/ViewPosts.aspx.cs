@@ -40,6 +40,11 @@ namespace MyProject
                         });
                     }
 
+                    if (postList.Count <= 0)
+                    {
+                        pnlNoPosts.Visible = true;
+                    }
+
                     rptPosts.DataSource = postList;
                     rptPosts.DataBind();
                 }
