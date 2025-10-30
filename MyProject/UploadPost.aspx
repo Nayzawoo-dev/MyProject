@@ -45,7 +45,7 @@
                         runat="server"
                         TextMode="MultiLine"
                         Rows="4"
-                        placeholder="သက်ကြီးရွယ်အိုများအတွက် ပရဟိတလုပ်ငန်းအကြောင်း ရေးသားပါ..."
+                        placeholder="မိမိတို့အဖွဲ့၏လုပ်ဆောင်ချက်များအားရေးသားပါ......"
                         CssClass="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition duration-200 text-gray-700 resize-none shadow-sm">
                     </asp:TextBox>
                 </div>
@@ -108,7 +108,7 @@
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    Post မတင်ခင်ပုံများကိုသေချာစွာစိစစ်အတည်ပြုပြီးမှတင်ပေးပါရန်               
+                    Post မတင်ခင်သေချာစွာစိစစ်အတည်ပြုပြီးမှတင်ပေးပါရန်........               
                 </p>
             </div>
         </div>

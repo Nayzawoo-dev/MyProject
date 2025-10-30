@@ -85,9 +85,9 @@
                     <!-- Logo -->
                     <div class="flex items-center">
                         <a class="navbar-brand flex" runat="server" href="~/">
-                            <asp:Image runat="server" ImageUrl="~/uploads/images/health.jpg" CssClass="h-12 md:h-15 lg:h-20 w-auto" />
+                            <asp:Image runat="server" ImageUrl="~/uploads/images/health.jpg" CssClass="h-12 md:h-15 lg:h-20 w-auto rounded-full" />
                         </a>
-                        <text y="30" font-family="Arial" font-size="14" fill="#2c7873">မြန်မာသက်ကြီးဖောင်ဒေးရှင်း(OPF)</text>
+                        <text y="30" font-family="Arial" font-size="14" fill="#2c7873" class="ml-4">မြန်မာသက်ကြီးဖောင်ဒေးရှင်း(OPF)</text>
                     </div>
 
                     <!-- Desktop Menu -->
@@ -120,7 +120,7 @@
         </nav>
 
         <!-- Main Content Area -->
-        <main class="flex-1 w-full">
+        <main class="flex-1 w-full mb-[100px]">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 <!-- This area will be filled by individual content pages -->
             </asp:ContentPlaceHolder>

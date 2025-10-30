@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using Dapper;
 
 namespace MyProject
@@ -15,7 +16,11 @@ namespace MyProject
             {
                 using (var con = new SqlConnection(cs))
                 {
-                    var data = con.Query<suggestion>("SELECT Name, SuggestionText FROM Suggestion ORDER BY Id DESC");
+                    var data = con.Query<suggestion>("SELECT * FROM Suggestion ORDER BY Id DESC");
+                    if (data.Count() == 0) 
+                    {
+                        pnlNoSuggestions.Visible = true;
+                    }
                     rptSuggestions.DataSource = data;
                     rptSuggestions.DataBind();
                 }
@@ -28,5 +33,7 @@ namespace MyProject
         public int Id { get; set; }
         public string Name { get; set; }
         public string SuggestionText { get; set; }
+
+        public DateTime CreatedDate {  get; set; }
     }
 }

@@ -24,6 +24,14 @@ namespace MyProject
             using (var con = new SqlConnection(cs))
             {
                 var list = con.Query<leader>("SELECT * FROM Leader ORDER BY Id DESC").ToList();
+                if (list.Count <= 0) 
+                { 
+                    pnlNoLeaders.Visible = true;
+                }
+                else
+                {
+                    pnlNoLeaders.Visible = false;
+                }
                 gvLeaders.DataSource = list;
                 gvLeaders.DataBind();
             }
@@ -45,6 +53,7 @@ namespace MyProject
                     // Insert new Leader
                     string sql = "INSERT INTO Leader (Name, Phone_No) VALUES (@Name, @Phone_No)";
                     con.Execute(sql, new { Name = txtName.Text, Phone_No = txtPhone.Text });
+                    pnlMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Green;
                     lblMessage.Text = "✅ Leader အသစ်ထည့်ပြီးပါပြီ။";
                 }
@@ -53,6 +62,7 @@ namespace MyProject
                     // Update existing Leader
                     string sql = "UPDATE Leader SET Name=@Name, Phone_No=@Phone_No WHERE Id=@Id";
                     con.Execute(sql, new { Name = txtName.Text, Phone_No = txtPhone.Text, Id = hfId.Value });
+                    pnlMessage.Visible = true;
                     lblMessage.Text = "✏ Leader အချက်အလက်ပြင်ပြီးပါပြီ။";
                     btnSave.Text = "ထည့်မယ်";
                     btnCancel.Visible = false;
@@ -90,6 +100,7 @@ namespace MyProject
                 using (var con = new SqlConnection(cs))
                 {
                     con.Execute("DELETE FROM Leader WHERE Id=@Id", new { Id = id });
+                    pnlMessage.Visible = true;
                     lblMessage.Text = "🗑 Leader ဖျက်ပြီးပါပြီ။";
                 }
                 LoadLeaders();

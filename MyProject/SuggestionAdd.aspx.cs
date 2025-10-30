@@ -22,8 +22,8 @@ namespace MyProject
                 }
                 using (var con = new SqlConnection(cs))
                 {
-                    string sql = "INSERT INTO Suggestion (Name, SuggestionText) VALUES (@Name, @SuggestionText)";
-                    con.Execute(sql, new { Name = txtName.Text, SuggestionText = txtSuggestion.Text });
+                    string sql = "INSERT INTO Suggestion (Name, SuggestionText , CreatedDate) VALUES (@Name, @SuggestionText,@CreatedDate)";
+                    con.Execute(sql, new suggestion{ Name = txtName.Text, SuggestionText = txtSuggestion.Text , CreatedDate = DateTime.Now });
                 }
 
                 // အောင်မြင်ပြီးနောက်
