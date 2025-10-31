@@ -120,7 +120,7 @@
         </nav>
 
         <!-- Main Content Area -->
-        <main class="flex-1 w-full mb-[100px]">
+        <main class="flex-1 w-full mb-[120px]">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 <!-- This area will be filled by individual content pages -->
             </asp:ContentPlaceHolder>

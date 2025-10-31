@@ -6,7 +6,7 @@
     <div class="bg-gradient-to-r from-primary to-secondary text-white py-8">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-2xl md:text-3xl font-bold mb-2">📬 အကြံပြုစာများ</h1>
-            <p class="text-lg opacity-90">အသုံးပြုသူများ၏ အကြံဉာဏ်များကို လေ့လာရန်</p>
+            <p class="text-lg opacity-90">အသုံးပြုသူများ၏အကြံဉာဏ်များကိုဖတ်ရန်</p>
         </div>
     </div>
 
